@@ -14,6 +14,10 @@ import { ModMessageComponent } from './mod-message/mod-message.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { ErrorHandlerService } from './error-handler.service';
 import { NaoAutorizadoComponent } from './nao-autorizado/nao-autorizado.component';
+import { PanelMenuModule, MessageModule, InputMaskModule } from 'primeng/primeng';
+import { FormsModule } from '@angular/forms';
+import { ToastyModule } from 'ng2-toasty';
+import { AppModule } from '../app.module';
 
 
 
@@ -22,32 +26,39 @@ import { NaoAutorizadoComponent } from './nao-autorizado/nao-autorizado.componen
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    PanelMenuModule,
+    FormsModule,
+    ToastModule,
+    MessageModule
 
   ],
   declarations: [
+    MenuComponent,
+    NavbarComponent,
+    // AppModule,
+    MessageComponent,
+    SidebarComponent,
+    ValidacaoFormComponent,
+    ModToastComponent,
+    ModMessageComponent,
+    BreadcrumbComponent,
+    PaginaNaoEncontradaComponent,
+    NaoAutorizadoComponent,
+
+
+  ],
+  exports: [
     MenuComponent,
     MessageComponent,
     NavbarComponent,
     SidebarComponent,
     ValidacaoFormComponent,
+    PaginaNaoEncontradaComponent,
     ModToastComponent,
-    ToastModule,
     ModMessageComponent,
     BreadcrumbComponent,
-    PaginaNaoEncontradaComponent,
     NaoAutorizadoComponent
-
-
-  ],
-  exports: [
-  MenuComponent,
-  MessageComponent,
-  NavbarComponent,
-  SidebarComponent,
-  ValidacaoFormComponent,
-  PaginaNaoEncontradaComponent,
-  NaoAutorizadoComponent
 
 
   ],

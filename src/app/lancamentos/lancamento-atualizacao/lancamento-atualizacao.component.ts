@@ -78,7 +78,7 @@ export class LancamentoAtualizacaoComponent implements OnInit {
       .catch(erro => this.errorHandler.handle(erro));
     }
 
-    atualizarLancamento(form: FormControl) {
+    atualizarLancamento(form) {
       this.lancamentoService.atualizar(this.lancamento)
         .then(lancamento => {
           this.validarAlteracoes(lancamento);
@@ -123,7 +123,7 @@ export class LancamentoAtualizacaoComponent implements OnInit {
       this.toasty.success(`Alteração em ${campos.join(', ')}. ${this.lancamento.descricao} está atualizado com sucesso.`);
   }
 
-    novo(form: FormControl){
+    novo(form){
       this.router.navigate(['lancamentos/novo']);
     }
 

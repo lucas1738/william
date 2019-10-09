@@ -32,7 +32,7 @@ export class PessoaCadastroComponent implements OnInit {
 
   pessoa = new Pessoa();
 
-  salvar(form: FormControl) {
+  salvar(form) {
     this.pessoaService.adicionar(this.pessoa)
       .then(() => {
         this.toasty.success(`Pessoa ${this.pessoa.nome} adicionada com sucesso!`);
@@ -45,7 +45,7 @@ export class PessoaCadastroComponent implements OnInit {
       .catch(erro => this.errorHandler.handle(erro));
   }
 
-  reset(form: FormControl) {
+  reset(form) {
       form.reset();
       this.pessoa = new Pessoa();
   }

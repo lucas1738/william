@@ -15,8 +15,8 @@ import { MenuService } from '../../../app/menu.service';
 
 export class MenuComponent {
 
-  constructor (private auth: AuthService,
-               private menuService: MenuService,
+  constructor (public auth: AuthService,
+               public menuService: MenuService,
                private errorHandler: ErrorHandlerService,
                private router: Router
                ) {}

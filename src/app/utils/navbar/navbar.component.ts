@@ -9,7 +9,7 @@ import { EventEmitter } from '@angular/core';
 })
 export class NavbarComponent {
 
-  constructor(private auth: AuthService) { }
+  constructor(public auth: AuthService) { }
 
   @Output() eventoNavbar = new EventEmitter();
 

@@ -77,7 +77,7 @@ export class LancamentoCadastroComponent implements OnInit {
     .catch(erro => this.errorHandler.handle(erro));
   }
 
-  salvar(form: FormControl) {
+  salvar(form) {
     this.lancamentoService.adicionar(this.lancamento)
       .then(() => {
         this.toasty.success(`Lançamento ${this.lancamento.descricao} adicionado com sucesso!`);
@@ -89,7 +89,7 @@ export class LancamentoCadastroComponent implements OnInit {
       .catch(erro => this.errorHandler.handle(erro));
   }
 
-  reset(form: FormControl){
+  reset(form){
     form.reset();
     this.lancamento = new Lancamento();
   }

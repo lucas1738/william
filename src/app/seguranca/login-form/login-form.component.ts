@@ -12,10 +12,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginFormComponent {
 
-  constructor(private auth: AuthService,
+  constructor(public auth: AuthService,
     private errorHandler: ErrorHandlerService,
     private router: Router,
-    private menuService: MenuService) { }
+    public menuService: MenuService) { }
 
     senhaInput: string;
 

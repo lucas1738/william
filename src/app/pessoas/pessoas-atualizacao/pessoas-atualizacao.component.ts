@@ -42,7 +42,7 @@ export class PessoasAtualizacaoComponent implements OnInit {
     .catch(erro => this.errorHandler.handle(erro));
   }
 
-  atualizarPessoa(form: FormControl) {
+  atualizarPessoa(form) {
     this.pessoaService.atualizar(this.pessoa)
       .then(pessoa => {
         this.pessoa = pessoa;
@@ -54,7 +54,7 @@ export class PessoasAtualizacaoComponent implements OnInit {
       .catch(erro => this.errorHandler.handle(erro));
   }
 
-  novo(form: FormControl){
+  novo(form){
     this.router.navigate(['pessoas/novo']);
   }
 

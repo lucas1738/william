@@ -31,7 +31,7 @@
         </div>
         <div class="ui-g-12 ui-lg-3 ui-fluid">
           <label>Valor</label>
-          <input pInputText name="valor" [(ngModel)]="lancamento.valor" placeholder="0,00" required #valor="ngModel" currencyMask [(ngModel)]="value" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', allowNegative: false }"/>
+          <input pInputText name="valor" [(ngModel)]="lancamento.valor" placeholder="0,00" required #valor="ngModel" currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', allowNegative: false }"/>
       <app-message [control]="valor" error="required" text="Informe um valor"></app-message>
 
     </div>

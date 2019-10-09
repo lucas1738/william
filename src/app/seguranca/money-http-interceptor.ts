@@ -9,7 +9,7 @@ export class NotAuthenticatedError {}
 @Injectable()
 export class MoneyHttpInterceptor implements HttpInterceptor {
 
-    constructor(private auth: AuthService) {}
+    constructor(public auth: AuthService) {}
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<any> {
 

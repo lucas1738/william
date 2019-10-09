@@ -30,7 +30,6 @@ import {InputTextModule} from 'primeng/components/inputtext/inputtext';
 import {ButtonModule} from 'primeng/components/button/button';
 import {TableModule} from 'primeng/components/table/table';
 import {TooltipModule} from 'primeng/components/tooltip/tooltip';
-import {CalendarModule} from 'primeng/components/calendar/calendar';
 import {DropdownModule} from 'primeng/dropdown';
 import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
 import {SelectButtonModule} from 'primeng/components/selectbutton/selectbutton';
@@ -58,6 +57,7 @@ import { MessageComponent } from './utils/message/message.component';
 import { ModToastComponent } from './utils/mod-toast/mod-toast.component';
 import { ConfirmDialogModule } from 'primeng/components/confirmdialog/confirmdialog';
 import { AppRoutingModule } from './app-routing.module';
+import { UtilsModule } from './utils/utils.module';
 
 registerLocaleData(localePt);
 
@@ -66,27 +66,22 @@ registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LancamentosPesquisaComponent,
-    NavbarComponent,
-    SidebarComponent,
-    MenuComponent,
-    PessoasPesquisaComponent,
-    LancamentoCadastroComponent,
-    LancamentoAtualizacaoComponent,
-    PessoaCadastroComponent,
-    ValidacaoFormComponent,
-    MessageComponent,
-    ModToastComponent,
-    ModMessageComponent,
-    BreadcrumbComponent,
-    PessoasAtualizacaoComponent,
-    PaginaNaoEncontradaComponent,
-    LoginFormComponent,
-    NaoAutorizadoComponent
+    AppComponent
+      // NavbarComponent,
+      // MenuComponent,
+    // SidebarComponent,
+    // ValidacaoFormComponent,
+    // MessageComponent,
+    // ModToastComponent,
+    // ModMessageComponent,
+    // BreadcrumbComponent,
+    // PaginaNaoEncontradaComponent,
+    // LoginFormComponent,
+    // NaoAutorizadoComponent
   ],
   imports: [
     BrowserModule,
+    UtilsModule,
     InputTextModule,
     ButtonModule,
     TableModule,
@@ -94,7 +89,6 @@ registerLocaleData(localePt);
     BrowserAnimationsModule,
     FormsModule,
     InputTextareaModule,
-    CalendarModule,
     SelectButtonModule,
     DropdownModule,
     InputMaskModule,

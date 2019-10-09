@@ -37,11 +37,11 @@ export class LancamentosPesquisaComponent {
     private datePipe: DatePipe,
     private lancamentoService: LancamentoService,
     private title: Title,
-    private auth: AuthService
+    public auth: AuthService
     ) {}
 
 
-    reset(form: FormControl){
+    reset(form){
       form.reset();
     }
 

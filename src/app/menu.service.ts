@@ -7,7 +7,7 @@ import { MenuItem } from 'primeng/api';
 })
 export class MenuService {
 
-  constructor(private auth: AuthService) { }
+  constructor(public auth: AuthService) { }
 
   _items: MenuItem[];
 
